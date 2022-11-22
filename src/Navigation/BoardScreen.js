@@ -1,13 +1,20 @@
 import React from "react";
 import Board from "../components/Board";
+import Menu from "../components/Menu";
 
 const BoardScreen = () => {
-	return (
-		<div>
-			<h1>This is the Board Screen</h1>
-			<Board></Board>
-		</div>
-	);
+  return (
+    <div style={{ display: "flex" }}>
+      <Menu></Menu>
+      <div style={styles.board}>
+        <Board size={100}></Board>
+      </div>
+    </div>
+  );
 };
 
 export default BoardScreen;
+
+const styles = {
+  board: { textAlign: "center" },
+};

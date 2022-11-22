@@ -5,25 +5,25 @@ import BoardScreen from "./Navigation/BoardScreen";
 import "./App.css";
 
 function App() {
-	return (
-		<Router>
-			<div className="App">
-				<ul className="App-header">
-					<h1>This is the TOP</h1>
-				</ul>
-				<li>
-					<Link to="/">HomeScreen</Link>
-				</li>
-				<li>
-					<Link to="/board">BoardScreen</Link>
-				</li>
-				<Routes>
-					<Route exact path="/" element={<HomeScreen />}></Route>
-					<Route exact path="/board" element={<BoardScreen />}></Route>
-				</Routes>
-			</div>
-		</Router>
-	);
+  return (
+    <Router>
+      <div>
+        <ul className="App-header">
+          <h1>This is the TOP</h1>
+          <li>
+            <Link to="/">HomeScreen</Link>
+          </li>
+          <li>
+            <Link to="/board">BoardScreen</Link>
+          </li>
+        </ul>
+        <Routes>
+          <Route exact path="/" element={<HomeScreen />}></Route>
+          <Route exact path="/board" element={<BoardScreen />}></Route>
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
